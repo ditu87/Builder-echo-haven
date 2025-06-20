@@ -33,7 +33,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
   } = useApp();
 
   const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
-  const [localCategory, setLocalCategory] = useState(selectedCategory || "");
+  const [localCategory, setLocalCategory] = useState(selectedCategory || "all");
   const [localCity, setLocalCity] = useState(selectedLocation?.city || "");
   const [localState, setLocalState] = useState(selectedLocation?.state || "");
 
