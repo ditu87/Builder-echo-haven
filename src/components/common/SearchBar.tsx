@@ -39,7 +39,9 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
   const handleSearch = () => {
     setSearchQuery(localSearchQuery);
-    setSelectedCategory(localCategory || null);
+    setSelectedCategory(
+      localCategory && localCategory !== "all" ? localCategory : null,
+    );
     setSelectedLocation(
       localCity && localState ? { city: localCity, state: localState } : null,
     );
@@ -105,7 +107,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
                 <SelectValue placeholder="Category" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Categories</SelectItem>
+                <SelectItem value="all">All Categories</SelectItem>
                 {categories.map((category) => (
                   <SelectItem key={category.id} value={category.id}>
                     {category.name}
