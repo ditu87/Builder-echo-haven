@@ -11,6 +11,9 @@ import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import ProductDetail from "./pages/ProductDetail";
 import Dashboard from "./pages/Dashboard";
+import AddProduct from "./pages/AddProduct";
+import Messages from "./pages/Messages";
+import Profile from "./pages/Profile";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import NotFound from "./pages/NotFound";
@@ -20,58 +23,6 @@ import Layout from "@/components/layout/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const queryClient = new QueryClient();
-
-// Placeholder page components
-const AddProduct: React.FC = () => (
-  <Layout>
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-      <Card>
-        <CardHeader>
-          <CardTitle>Add Product</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-gray-600">
-            Add product functionality will be implemented in the next iteration.
-          </p>
-        </CardContent>
-      </Card>
-    </div>
-  </Layout>
-);
-
-const Messages: React.FC = () => (
-  <Layout>
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-      <Card>
-        <CardHeader>
-          <CardTitle>Messages</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-gray-600">
-            Messaging functionality will be implemented in the next iteration.
-          </p>
-        </CardContent>
-      </Card>
-    </div>
-  </Layout>
-);
-
-const Profile: React.FC = () => (
-  <Layout>
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-      <Card>
-        <CardHeader>
-          <CardTitle>Profile Settings</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-gray-600">
-            Profile settings will be implemented in the next iteration.
-          </p>
-        </CardContent>
-      </Card>
-    </div>
-  </Layout>
-);
 
 const AdminDashboard: React.FC = () => (
   <Layout>
