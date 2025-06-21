@@ -140,7 +140,7 @@ const Home: React.FC = () => {
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Join thousands of people sharing resources in their community.
               From cameras to cars, tools to party equipment - find what you
-              need or earn by renting what you own.
+              need or earn by renting what you own in 2025.
             </p>
 
             {/* Hero Search Bar */}
@@ -431,7 +431,7 @@ const Home: React.FC = () => {
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join our community today and discover a new way to access the things
-            you need while earning from the things you own.
+            you need while earning from the things you own in 2025.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
