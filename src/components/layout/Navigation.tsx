@@ -58,7 +58,7 @@ const Navigation: React.FC = () => {
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
               <span className="text-white font-bold text-lg">R</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">RentHub</span>
+            <span className="text-xl font-bold text-gray-900">Rent Bazaar</span>
           </Link>
 
           {/* Desktop Navigation */}

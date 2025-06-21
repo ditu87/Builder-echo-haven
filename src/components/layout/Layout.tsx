@@ -21,7 +21,9 @@ const Layout: React.FC<LayoutProps> = ({ children, className = "" }) => {
                 <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
                   <span className="text-white font-bold text-lg">R</span>
                 </div>
-                <span className="text-xl font-bold text-gray-900">RentHub</span>
+                <span className="text-xl font-bold text-gray-900">
+                  Rent Bazaar
+                </span>
               </div>
               <p className="text-gray-600 mb-4">
                 The trusted marketplace for renting anything you need. Connect
@@ -175,7 +177,7 @@ const Layout: React.FC<LayoutProps> = ({ children, className = "" }) => {
                 </a>
               </div>
               <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-                &copy; 2024 RentHub. All rights reserved.
+                &copy; 2025 Rent Bazaar. All rights reserved.
               </p>
             </div>
           </div>
