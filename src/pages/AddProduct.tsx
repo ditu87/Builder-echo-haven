@@ -19,6 +19,7 @@ import { Progress } from "@/components/ui/progress";
 import { useAuth } from "@/context/AuthContext";
 import { useApp } from "@/context/AppContext";
 import { supabase, Category } from "@/lib/supabase";
+import { sampleCategories } from "@/data/sampleCategories";
 import {
   Upload,
   X,
@@ -73,11 +74,26 @@ const AddProduct: React.FC = () => {
     if (categories.length === 0) {
       try {
         const { data } = await supabase.from("categories").select("*");
-        if (data) {
+        if (data && data.length > 0) {
           setCategories(data);
+        } else {
+          // Use sample categories as fallback
+          const fallbackCategories = sampleCategories.map((cat, index) => ({
+            id: `sample-${index}`,
+            ...cat,
+            created_at: new Date().toISOString(),
+          }));
+          setCategories(fallbackCategories);
         }
       } catch (error) {
         console.error("Error fetching categories:", error);
+        // Use sample categories as fallback on error
+        const fallbackCategories = sampleCategories.map((cat, index) => ({
+          id: `sample-${index}`,
+          ...cat,
+          created_at: new Date().toISOString(),
+        }));
+        setCategories(fallbackCategories);
       }
     }
   };
