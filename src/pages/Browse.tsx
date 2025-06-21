@@ -15,6 +15,7 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { useApp } from "@/context/AppContext";
 import { supabase, Product } from "@/lib/supabase";
+import { sampleCategories } from "@/data/sampleCategories";
 import {
   Camera,
   MapPin,
@@ -88,8 +89,16 @@ const Browse: React.FC = () => {
           .from("categories")
           .select("*");
 
-        if (categoriesData) {
+        if (categoriesData && categoriesData.length > 0) {
           setCategories(categoriesData);
+        } else {
+          // Use sample categories as fallback
+          const fallbackCategories = sampleCategories.map((cat, index) => ({
+            id: `sample-${index}`,
+            ...cat,
+            created_at: new Date().toISOString(),
+          }));
+          setCategories(fallbackCategories);
         }
       }
 
