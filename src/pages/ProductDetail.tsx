@@ -24,6 +24,7 @@ import {
   Shield,
   Clock,
   DollarSign,
+  Package,
   Camera,
   ChevronLeft,
   ChevronRight,
