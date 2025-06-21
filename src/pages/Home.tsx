@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useApp } from "@/context/AppContext";
 import { supabase, Product, Category } from "@/lib/supabase";
+import { sampleCategories } from "@/data/sampleCategories";
 import {
   Shield,
   Users,
@@ -43,8 +44,18 @@ const Home: React.FC = () => {
         .select("*")
         .limit(8);
 
-      if (categoriesData) {
+      if (categoriesData && categoriesData.length > 0) {
         setCategories(categoriesData);
+      } else {
+        // Use sample categories as fallback
+        const fallbackCategories = sampleCategories
+          .slice(0, 8)
+          .map((cat, index) => ({
+            id: `sample-${index}`,
+            ...cat,
+            created_at: new Date().toISOString(),
+          }));
+        setCategories(fallbackCategories);
       }
 
       // Fetch featured products (recent ones)
