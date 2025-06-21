@@ -14,6 +14,7 @@ import Dashboard from "./pages/Dashboard";
 import AddProduct from "./pages/AddProduct";
 import Messages from "./pages/Messages";
 import Profile from "./pages/Profile";
+import Safety from "./pages/Safety";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import NotFound from "./pages/NotFound";
@@ -89,7 +90,7 @@ const App = () => (
               <Route path="/browse" element={<Browse />} />
               <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="/category/:slug" element={<CategoryPage />} />
-              <Route path="/safety" element={<SafetyPage />} />
+              <Route path="/safety" element={<Safety />} />
 
               {/* Authentication routes */}
               <Route path="/auth/login" element={<Login />} />
